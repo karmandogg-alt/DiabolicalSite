@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es" data-lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>L2Diabolical — Information</title>
+  <meta name="description" content="Información del servidor: rates, características, cronograma y reglas." />
+  <meta name="theme-color" content="#0f172a" />
+  <script src="https://cdn.tailwindcss.com" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="site-bg min-h-screen bg-[#0f172a] text-slate-200">
+  <!-- Header -->
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="brand" href="index.html"><i class="fa-solid fa-dragon"></i><span class="medieval gradient-text">L2Diabolical</span></a>
+      <ul class="menu">
+        <li><a data-nav="home" href="index.html"><span data-lang="es">Inicio</span><span data-lang="en">Home</span></a></li>
+        <li><a data-nav="info" class="active" href="information.html"><span data-lang="es">Información</span><span data-lang="en">Information</span></a></li>
+        <li><a data-nav="download" href="download.html"><span data-lang="es">Descargas</span><span data-lang="en">Download</span></a></li>
+      </ul>
+      <div class="lang-switch">
+        <button id="lang-es" class="btn-ghost">ES</button>
+        <button id="lang-en" class="btn-ghost">EN</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero simple -->
+    <section class="page-hero">
+      <div class="container text-center">
+        <h1 class="medieval gradient-text title-xl">
+          <span data-lang="es">Información del Servidor</span>
+          <span data-lang="en">Server Information</span>
+        </h1>
+        <p class="muted"><span data-lang="es">Rates, características, cronograma y reglas.</span><span data-lang="en">Rates, features, roadmap and rules.</span></p>
+      </div>
+    </section>
+
+    <!-- Rates -->
+    <section id="rates" class="py-12 gradient-section">
+      <div class="container">
+        <h2 class="section-title"><span data-lang="es">Rates</span><span data-lang="en">Rates</span></h2>
+        <div id="rates-cards" class="grid-3"></div>
+      </div>
+    </section>
+
+    <!-- Features list -->
+    <section class="py-12 bg-slate-900">
+      <div class="container">
+        <h2 class="section-title"><span data-lang="es">Características Clave</span><span data-lang="en">Key Features</span></h2>
+        <ul class="feature-list">
+          <li><i class="fa-solid fa-wand-magic-sparkles"></i> <span data-lang="es">Eventos semanales PvE y PvP</span><span data-lang="en">Weekly PvE & PvP events</span></li>
+          <li><i class="fa-solid fa-screwdriver-wrench"></i> <span data-lang="es">Balance continuo y parches rápidos</span><span data-lang="en">Continuous balance & quick patches</span></li>
+          <li><i class="fa-solid fa-people-group"></i> <span data-lang="es">Mentores y clanes de bienvenida</span><span data-lang="en">Mentors & welcoming clans</span></li>
+          <li><i class="fa-solid fa-lock"></i> <span data-lang="es">Medidas anti-cheat activas</span><span data-lang="en">Active anti-cheat measures</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Roadmap (timeline) -->
+    <section class="py-12 gradient-section-alt">
+      <div class="container">
+        <h2 class="section-title"><span data-lang="es">Roadmap</span><span data-lang="en">Roadmap</span></h2>
+        <div class="timeline" id="roadmap"></div>
+      </div>
+    </section>
+
+    <!-- Rules (accordion) -->
+    <section class="py-12 bg-slate-900">
+      <div class="container">
+        <h2 class="section-title"><span data-lang="es">Reglas</span><span data-lang="en">Rules</span></h2>
+        <div id="rules" class="accordion"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container small muted">© 2025 L2Diabolical</div>
+  </footer>
+
+  <!-- Datos -->
+  <script id="info-data" type="application/json">
+  {
+    "rates": [
+      {
+        "icon": "fa-bolt", 
+        "title": {"es":"Experiencia & SP","en":"Experience & SP"},
+        "items": [{"label":{"es":"XP","en":"XP"},"value":"x3"},{"label":{"es":"SP","en":"SP"},"value":"x3"},{"label":{"es":"Party XP","en":"Party XP"},"value":"x1.5"},{"label":{"es":"Party SP","en":"Party SP"},"value":"x1.5"}]
+      },
+      {
+        "icon": "fa-gem",
+        "title": {"es":"Drops","en":"Drops"},
+        "items": [{"label":{"es":"Adena","en":"Adena"},"value":"x2"},{"label":{"es":"Ítems comunes","en":"Common items"},"value":"x2"},{"label":{"es":"Raid","en":"Raid"},"value":"x1"},{"label":{"es":"Spoil","en":"Spoil"},"value":"x2"}]
+      },
+      {
+        "icon": "fa-scroll",
+        "title": {"es":"Quest","en":"Quest"},
+        "items": [{"label":{"es":"Quest Drop","en":"Quest Drop"},"value":"x2"},{"label":{"es":"Recompensa","en":"Reward"},"value":"x2"},{"label":{"es":"Quest XP","en":"Quest XP"},"value":"x2"},{"label":{"es":"Quest SP","en":"Quest SP"},"value":"x2"}]
+      }
+    ],
+    "roadmap": [
+      {"date":"2025-09-30","title":{"es":"Lanzamiento","en":"Launch"},"desc":{"es":"Apertura oficial del servidor.","en":"Official server opening."}},
+      {"date":"2025-10-15","title":{"es":"Evento Halloween","en":"Halloween Event"},"desc":{"es":"Skins, bosses y recompensas temáticas.","en":"Skins, bosses and themed rewards."}},
+      {"date":"2025-11-05","title":{"es":"Balance Pack #1","en":"Balance Pack #1"},"desc":{"es":"Ajustes a clases y raids.","en":"Class and raid adjustments."}}
+    ],
+    "rules": [
+      {"q":{"es":"Respeto entre jugadores","en":"Respect between players"},"a":{"es":"Prohibidos insultos, racismo o acoso.","en":"No harassment, racism or insults."}},
+      {"q":{"es":"Uso de software","en":"Software usage"},"a":{"es":"No se permite botting ni macros externos.","en":"No botting or external macros."}},
+      {"q":{"es":"Comercio","en":"Trading"},"a":{"es":"RMT está prohibido. Los infractores serán baneados.","en":"RMT is forbidden. Offenders will be banned."}}
+    ]
+  }
+  </script>
+
+  <script src="js/site.js" defer type="module"></script>
+  <script src="js/information.js" defer type="module"></script>
+</body>
+</html>

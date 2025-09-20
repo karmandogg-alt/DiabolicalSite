@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es" data-lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>L2Diabolical — Download</title>
+  <meta name="description" content="Descarga el launcher, cliente y patch de L2Diabolical. Checksums y guía rápida." />
+  <meta name="theme-color" content="#0f172a" />
+  <script src="https://cdn.tailwindcss.com" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="site-bg min-h-screen bg-[#0f172a] text-slate-200"> 
+  <!-- Header -->
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="brand" href="index.html"><i class="fa-solid fa-dragon"></i><span class="medieval gradient-text">L2Diabolical</span></a>
+      <ul class="menu">
+        <li><a data-nav="home" href="index.html"><span data-lang="es">Inicio</span><span data-lang="en">Home</span></a></li>
+        <li><a data-nav="info" href="information.html"><span data-lang="es">Información</span><span data-lang="en">Information</span></a></li>
+        <li><a data-nav="download" class="active" href="download.html"><span data-lang="es">Descargas</span><span data-lang="en">Download</span></a></li>
+      </ul>
+      <div class="lang-switch">
+        <button id="lang-es" class="btn-ghost">ES</button>
+        <button id="lang-en" class="btn-ghost">EN</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero simple -->
+    <section class="page-hero">
+      <div class="container text-center">
+        <h1 class="medieval gradient-text title-xl"><span data-lang="es">Descargas</span><span data-lang="en">Downloads</span></h1>
+        <p class="muted"><span data-lang="es">Launcher recomendado, cliente completo y patch.</span><span data-lang="en">Recommended launcher, full client and patch.</span></p>
+      </div>
+    </section>
+
+    <!-- OS detect + cards -->
+    <section class="py-12 bg-slate-900">
+      <div class="container">
+        <div class="dl-header text-center mb-4">
+          <span class="os-suggest" id="os-suggest">
+            <i class="fa-solid fa-desktop"></i>
+            <span data-lang="es">Detectado:</span><span data-lang="en">Detected:</span>
+            <strong id="os-name">Windows</strong>
+          </span>
+        </div>
+
+        <div id="panel-windows" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
+
+        <h2 class="section-title mt-10"><span data-lang="es">Verificar Integridad</span><span data-lang="en">Verify Integrity</span></h2>
+        <div id="checksums" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+
+        <div class="codebox mt-3">
+          <span data-lang="es">Windows: <code>CertUtil -hashfile TU_ARCHIVO.zip SHA256</code> — Linux: <code>sha256sum TU_ARCHIVO.zip</code></span>
+          <span data-lang="en">Windows: <code>CertUtil -hashfile YOUR_FILE.zip SHA256</code> — Linux: <code>sha256sum YOUR_FILE.zip</code></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Help / Discord -->
+    <section class="py-12 bg-slate-800 text-center">
+      <div class="container">
+        <h2 class="section-title"><span data-lang="es">¿Necesitas ayuda?</span><span data-lang="en">Need help?</span></h2>
+        <p class="muted mb-4"><span data-lang="es">Únete a nuestro Discord y abre un ticket.</span><span data-lang="en">Join our Discord and open a ticket.</span></p>
+        <a id="discord-link" href="#" target="_blank" rel="noopener" class="btn-primary">
+          <i class="fab fa-discord"></i>
+          <span data-lang="es">Entrar a Discord</span><span data-lang="en">Join Discord</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container small muted">© 2025 L2Diabolical</div>
+  </footer>
+
+  <!-- Data -->
+  <script id="downloads-data" type="application/json">
+  {
+    "discord": "https://discord.gg/TuInviteReal",
+    "windows": [
+      {
+        "kind": {"es":"Launcher (recomendado)", "en":"Launcher (recommended)"},
+        "description": {"es":"Actualizaciones automáticas y verificación de archivos.", "en":"Automatic updates and file verification."},
+        "version": "1.2.0",
+        "size": "12 MB",
+        "file": "L2jBrasilLauncher-1.2.0.exe",
+        "mirrors": [{"name": "CDN", "url": "#"}, {"name":"Drive","url":"#"}],
+        "sha256": "f3b1b4a0d1a7c8e43a92b1d0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8090a"
+      },
+      {
+        "kind": {"es":"Cliente Completo", "en":"Full Client"},
+        "description": {"es":"Cliente listo para jugar (recomendado para instalación limpia).", "en":"Ready-to-play client (recommended for fresh install)."},
+        "version": "2025.09",
+        "size": "7.8 GB",
+        "file": "L2jBrasilClient-2025.09.zip",
+        "mirrors": [{"name": "CDN", "url": "#"}, {"name":"Torrent","url":"#"}],
+        "sha256": "a1e2d3c4b5a6978877665544332211ffeeddccbbaa99887766554433221100ff"
+      },
+      {
+        "kind": {"es":"Patch (actualización)", "en":"Patch"},
+        "description": {"es":"Solo archivos modificados para clientes existentes.", "en":"Only modified files for existing client."},
+        "version": "2025.09.20",
+        "size": "320 MB",
+        "file": "L2jBrasilPatch-2025.09.20.zip",
+        "mirrors": [{"name": "CDN", "url": "#"}],
+        "sha256": "0f1e2d3c4b5a6978877665544332211ffeeddccbbaa9988776655443322110aa"
+      }
+    ]
+  }
+  </script>
+
+  <script src="js/site.js" defer type="module"></script>
+  <script src="js/download.js" defer type="module"></script>
+</body>
+</html>
