@@ -1,100 +1,203 @@
-<!doctype html>
-<html lang="es">
+<!DOCTYPE html>
+<html lang="es" data-lang="es">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Diabolical — Servidor Lineage II privado</title>
-  <meta name="description" content="Diabolical — servidor privado Lineage II. PvP, eventos, comunidad y descargas.">
-  <link rel="canonical" href="https://karmandogg-alt.github.io/DiabolicalSite/index.html">
-
-  <!-- Open Graph / Twitter -->
-  <meta property="og:locale" content="es_ES" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Diabolical — Servidor Lineage II" />
-  <meta property="og:description" content="PvP, eventos, rankings y comunidad en Diabolical." />
-  <meta property="og:url" content="https://karmandogg-alt.github.io/DiabolicalSite/index.html" />
-  <meta property="og:image" content="https://karmandogg-alt.github.io/DiabolicalSite/img/og-image.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-
-  <!-- Preconnect/Preload fuentes críticas -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-  <!-- Favicon / Icons -->
-  <link rel="icon" href="/DiabolicalSite/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>L2Diabolical — Home</title>
+  <meta name="description" content="L2Diabolical: el legado de Lineage 2 con una experiencia moderna. Comunidad, eventos y estabilidad." />
   <meta name="theme-color" content="#0f172a" />
-
-  <!-- Critical CSS inline mínimo (ejemplo) -->
-  <style>
-    :root{ --bg:#0f172a; --text:#e2e8f0; --accent:#f59e0b; --panel:rgba(15,23,42,.86);}
-    html,body{height:100%;margin:0;font-family:'Poppins',system-ui,Arial,sans-serif;background:var(--bg);color:var(--text);}
-    .container{max-width:1100px;margin:0 auto;padding:24px;}
-    header{display:flex;align-items:center;justify-content:space-between;gap:12px}
-    a.logo{font-weight:700;letter-spacing:.6px;color:var(--text);text-decoration:none}
-    .hero{display:grid;grid-template-columns:1fr;gap:18px;padding:48px 0}
-    @media(min-width:900px){ .hero{grid-template-columns:1fr 420px} }
-    .card{background:var(--panel);padding:18px;border-radius:12px;box-shadow:0 6px 20px rgba(0,0,0,.35)}
-    footer{opacity:.8;padding:18px 0;font-size:.95rem}
-    /* Utility */
-    .muted{color:#94a3b8}
-    .btn{display:inline-block;padding:10px 16px;border-radius:10px;background:var(--accent);color:#111;text-decoration:none;font-weight:600}
-  </style>
-
-  <!-- Archivo CSS principal: cargar deferido para no bloquear -->
-  <link rel="stylesheet" href="/DiabolicalSite/css/styles.css" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="/DiabolicalSite/css/styles.css"></noscript>
+  <script src="https://cdn.tailwindcss.com" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
-<body>
-  <a class="sr-only" href="#main">Saltar al contenido</a>
-  <header class="container" role="banner">
-    <a class="logo" href="/">Diabolical</a>
-    <nav aria-label="Principal">
-      <a class="muted" href="/DiabolicalSite/#about">Acerca</a>
-      <a class="muted" href="/DiabolicalSite/#events">Eventos</a>
-      <a class="muted" href="/DiabolicalSite/#download">Descargas</a>
-      <a class="btn" href="/DiabolicalSite/#connect">Conectar</a>
+<body class="site-bg min-h-screen bg-[#0f172a] text-slate-200"> 
+  <!-- Header -->
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="brand" href="index.html">
+        <i class="fa-solid fa-dragon"></i>
+        <span class="medieval gradient-text">L2Diabolical</span>
+      </a>
+      <ul class="menu">
+        <li><a data-nav="home" href="index.html"><span data-lang="es">Inicio</span><span data-lang="en">Home</span></a></li>
+        <li><a data-nav="info" href="information.html"><span data-lang="es">Informacion</span><span data-lang="en">Information</span></a></li>
+        <li><a data-nav="download" href="download.html"><span data-lang="es">Descargas</span><span data-lang="en">Download</span></a></li>
+      </ul>
+      <div class="lang-switch">
+        <button id="lang-es" class="btn-ghost">ES</button>
+        <button id="lang-en" class="btn-ghost">EN</button>
+      </div>
     </nav>
   </header>
 
-  <main id="main" class="container" role="main">
-    <section class="hero" aria-labelledby="hero-title">
-      <div>
-        <h1 id="hero-title">Bienvenido a Diabolical — domina el campo de batalla</h1>
-        <p class="muted">Servidor privado Lineage II — PvP, eventos semanales, rankings y comunidad activa.</p>
-        <p><a class="btn" href="/DiabolicalSite/#download">Descargar cliente</a></p>
-      </div>
-      <div class="card" aria-labelledby="status-title">
-        <h2 id="status-title">Estado del servidor</h2>
-        <p id="server-status" class="muted">Comprobando estado…</p>
-        <p><a href="/DiabolicalSite/#rankings" class="muted">Ver rankings</a></p>
+  <main>
+    <!-- HERO épico -->
+    <section class="hero-epic">
+      <video class="hero-video" autoplay muted loop playsinline poster="assets/hero-poster.jpg">
+        <source src="assets/hero.mp4" type="video/mp4" />
+      </video>
+      <div class="hero-overlay"></div>
+      <div class="container hero-inner">
+        <h1 class="medieval gradient-text title-xxl">L2Diabolical</h1>
+        <p class="hero-sub">
+          <span data-lang="es">El legado clásico de Lineage 2 llevado a la modernidad.</span>
+          <span data-lang="en">The classic legacy of Lineage 2 brought into the modern era.</span>
+        </p>
+        <div class="hero-ctas">
+          <a href="download.html" class="btn-hero-primary">
+            <i class="fa-solid fa-download"></i>
+            <span data-lang="es">Descargar</span><span data-lang="en">Download</span>
+          </a>
+          <a id="discord-cta" href="#" target="_blank" rel="noopener" class="btn-hero-secondary">
+            <i class="fab fa-discord"></i>
+            <span data-lang="es">Entrar a Discord</span><span data-lang="en">Join Discord</span>
+          </a>
+        </div>
+        <div class="hero-badges">
+          <span class="badge"><i class="fa-solid fa-users"></i> <span id="hero-online">0</span> <span data-lang="es">en línea</span><span data-lang="en">online</span></span>
+          <span class="badge"><i class="fa-solid fa-shield-halved"></i> 99.9% Uptime</span>
+          <span class="badge"><i class="fa-solid fa-bolt"></i> Anti-cheat</span>
+        </div>
+        <button class="hero-scroll" aria-label="Scroll">
+          <i class="fa-solid fa-angles-down"></i>
+        </button>
       </div>
     </section>
 
-    <!-- Más secciones: about/events/download/contact -->
-    <section id="about" class="card" aria-labelledby="about-title">
-      <h2 id="about-title">Acerca de Diabolical</h2>
-      <p class="muted">Pequeña descripción…</p>
+    <!-- Online counter (se sincroniza con hero) -->
+    <section class="py-4 bg-gray-800 text-center">
+      <div class="container">
+        <span class="text-2xl font-bold text-amber-400">
+          <i class="fas fa-users"></i>
+          <span id="player-counter">0</span>
+          <span data-lang="es">jugadores en línea</span>
+          <span data-lang="en">players online</span>
+        </span>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="about" class="py-16 gradient-section">
+      <div class="container">
+        <h2 class="section-title"><span data-lang="es">¿Por qué L2Diabolical?</span><span data-lang="en">Why L2Diabolical?</span></h2>
+        <p class="section-sub">
+          <span data-lang="es">Lo mejor del Lineage II clásico con mejoras modernas.</span>
+          <span data-lang="en">The best of classic Lineage II with modern improvements.</span>
+        </p>
+        <div class="grid-3">
+          <div class="server-card p-6 text-center">
+            <i class="fas fa-shield-alt text-amber-500 text-3xl mb-2"></i>
+            <h3 class="font-bold"><span data-lang="es">Estabilidad</span><span data-lang="en">Stability</span></h3>
+            <p class="muted"><span data-lang="es">Protección anti-cheat y uptime de 99.9%.</span><span data-lang="en">Robust anti-cheat and 99.9% uptime.</span></p>
+          </div>
+          <div class="server-card p-6 text-center">
+            <i class="fas fa-users text-red-500 text-3xl mb-2"></i>
+            <h3 class="font-bold"><span data-lang="es">Comunidad Activa</span><span data-lang="en">Active Community</span></h3>
+            <p class="muted"><span data-lang="es">Eventos semanales y soporte constante.</span><span data-lang="en">Weekly events and constant support.</span></p>
+          </div>
+          <div class="server-card p-6 text-center">
+            <i class="fas fa-sync-alt text-blue-500 text-3xl mb-2"></i>
+            <h3 class="font-bold"><span data-lang="es">Actualizaciones</span><span data-lang="en">Updates</span></h3>
+            <p class="muted"><span data-lang="es">Balance y contenido nuevo frecuentes.</span><span data-lang="en">Frequent balance and new content.</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- News -->
+    <section class="py-12 bg-slate-800">
+      <div class="container">
+        <h2 class="section-title text-center"><span data-lang="es">Noticias & Eventos</span><span data-lang="en">News & Events</span></h2>
+        <div id="news-list" class="grid-3 gap-6"></div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-12 ribbon-section">
+      <div class="container">
+        <h2 class="section-title text-center"><span data-lang="es">Opiniones</span><span data-lang="en">Testimonials</span></h2>
+        <div id="testimonials-list" class="flex flex-col md:flex-row gap-6 justify-center"></div>
+      </div>
+    </section>
+
+    <!-- Ranking -->
+    <section class="py-12 bg-slate-900">
+      <div class="container">
+        <h2 class="section-title text-center"><span data-lang="es">Top Jugadores</span><span data-lang="en">Top Players</span></h2>
+        <div class="overflow-x-auto" id="ranking-list">
+          <table class="min-w-full text-left text-gray-300">
+            <thead>
+              <tr class="bg-gray-800">
+                <th class="py-2 px-4"><span data-lang="es">Nombre</span><span data-lang="en">Name</span></th>
+                <th class="py-2 px-4">PvP</th>
+                <th class="py-2 px-4">PK</th>
+                <th class="py-2 px-4">Clan</th>
+              </tr>
+            </thead>
+            <tbody id="ranking-table"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="py-12 gradient-section-alt">
+      <div class="container">
+        <h2 class="section-title text-center"><span data-lang="es">Galería</span><span data-lang="en">Gallery</span></h2>
+        <div id="gallery-list" class="grid grid-cols-2 md:grid-cols-4 gap-4"></div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-16 bg-slate-900">
+      <div class="container">
+        <h2 class="section-title text-center"><span data-lang="es">Preguntas Frecuentes</span><span data-lang="en">Frequently Asked Questions</span></h2>
+        <div id="faq-list" class="max-w-2xl mx-auto"></div>
+      </div>
     </section>
   </main>
 
-  <footer class="container" role="contentinfo">
-    <small>© <span id="year"></span> Diabolical — Todos los derechos reservados.</small>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container small muted">
+      © 2025 L2Diabolical — <span data-lang="es">Todos los derechos reservados.</span><span data-lang="en">All rights reserved.</span>
+    </div>
   </footer>
 
-  <!-- Scripts: cargar defer para rendimiento -->
-  <script>
-    // Pequeño script crítico inline (no bloquear)
-    document.getElementById('year').textContent = new Date().getFullYear();
-    // Cargar info de estado (ejemplo)
-    (async function(){
-      try{
-        const el = document.getElementById('server-status');
-        // si tienes una API, reemplaza la URL
-        // const r = await fetch('/api/status'); el.textContent = (await r.json()).message;
-        el.textContent = 'Online — Último tick: hace 2m';
-      }catch(e){console.warn(e)}
-    })();
+  <!-- Datos -->
+  <script id="index-data" type="application/json">
+  {
+    "discordInvite": "https://discord.gg/TuInviteReal",
+    "news": [
+      { "date": "2025-09-18", "title": { "es":"Apertura Beta", "en":"Beta Opening" }, "text": { "es":"Comienza la beta pública este fin de semana.", "en":"Public beta starts this weekend." } },
+      { "date": "2025-09-12", "title": { "es":"Evento XP x2", "en":"XP x2 Event" }, "text": { "es":"Sábado y domingo con experiencia doble.", "en":"Double XP on Saturday and Sunday." } },
+      { "date": "2025-09-05", "title": { "es":"Parche de equilibrio", "en":"Balance Patch" }, "text": { "es":"Ajustes a raids y habilidades clave.", "en":"Adjustments to raids and key skills." } }
+    ],
+    "testimonials": [
+      { "name":"Rafa", "avatar":"https://i.pravatar.cc/100?img=1", "text": { "es":"Servidor estable y staff activo.", "en":"Stable server and active staff." } },
+      { "name":"Lia",  "avatar":"https://i.pravatar.cc/100?img=2", "text": { "es":"Eventos divertidos cada semana.", "en":"Fun weekly events." } },
+      { "name":"Gui",  "avatar":"https://i.pravatar.cc/100?img=3", "text": { "es":"Comunidad amable y competitiva.", "en":"Friendly, competitive community." } }
+    ],
+    "ranking": [
+      { "name":"DarkKnight", "pvp":120, "pk":5, "clan":"Hegemony" },
+      { "name":"ArcMage",    "pvp":98,  "pk":2, "clan":"Eclipse" },
+      { "name":"BladeSoul",  "pvp":81,  "pk":0, "clan":"Dominion" }
+    ],
+    "gallery": [
+      "https://picsum.photos/seed/l2a/600/350",
+      "https://picsum.photos/seed/l2b/600/350",
+      "https://picsum.photos/seed/l2c/600/350",
+      "https://picsum.photos/seed/l2d/600/350"
+    ],
+    "faq": [
+      { "q": { "es":"¿Es pay-to-win?", "en":"Is it pay-to-win?" }, "a": { "es":"No. Todo se puede obtener jugando.", "en":"No. Everything is obtainable by playing." } },
+      { "q": { "es":"¿Qué crónica es?", "en":"Which chronicle?" }, "a": { "es":"High Five con mejoras modernas.", "en":"High Five with modern improvements." } },
+      { "q": { "es":"¿Hay GMs online?", "en":"Are GMs online?" }, "a": { "es":"Sí, en horarios de pico.", "en":"Yes, at peak hours." } }
+    ]
+  }
   </script>
-  <script src="/DiabolicalSite/js/main.js" defer></script>
+
+  <script src="js/site.js" defer type="module"></script>
+  <script src="js/index.js" defer type="module"></script>
 </body>
 </html>
